@@ -62,7 +62,7 @@ static void keyball_oled_render_sub(void) {
     }
 }
 
-// OLEDƒƒCƒ“ˆ—(ƒTƒu‘¤)
+// OLEDãƒ¡ã‚¤ãƒ³å‡¦ç†(ã‚µãƒ–å´)
 void keyball_oled_render_mysub(void) {
     keyball_oled_render_sub();
 }
