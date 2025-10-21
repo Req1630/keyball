@@ -51,14 +51,42 @@ static const char PROGMEM img_num4[] = {
     0x00, 0x1f, 0x1f, 0x1f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
+static const char *itoc(uint8_t number, uint8_t width) {
+    static char str[5]; 
+    uint8_t i = 0;
+    width = width > 4 ? 4 : width;
+
+    do {
+        str[i++] = number % 10 + '0';
+        number /= 10;
+    } while (number != 0);
+
+    while (i < width) {
+        str[i++] = ' ';
+    }
+
+    int len = i;
+    for (int j = 0; j < len / 2; j++) {
+        char temp = str[j];
+        str[j] = str[len - j - 1];
+        str[len - j - 1] = temp;
+    }
+
+    str[i] = '\0';
+    return str;
+}
+
 static void keyball_oled_render_sub(void) {
+    oled_set_cursor(0, 0);
+    oled_write(itoc(get_highest_layer(layer_state) 0), false);
+
     oled_set_cursor(0, 10);
     switch (get_highest_layer(layer_state)) {
-    case 1:  oled_write_raw_P(img_num1, sizeof(img_num1)); break;
-    case 2:  oled_write_raw_P(img_num2, sizeof(img_num2)); break;
-    case 3:  oled_write_raw_P(img_num3, sizeof(img_num3)); break;
-    case 4:  oled_write_raw_P(img_num4, sizeof(img_num4)); break;
-    default: oled_write_raw_P(img_num0, sizeof(img_num0)); break;
+        case 1:  oled_write_raw_P(img_num1, sizeof(img_num1)); break;
+        case 2:  oled_write_raw_P(img_num2, sizeof(img_num2)); break;
+        case 3:  oled_write_raw_P(img_num3, sizeof(img_num3)); break;
+        case 4:  oled_write_raw_P(img_num4, sizeof(img_num4)); break;
+        default: oled_write_raw_P(img_num0, sizeof(img_num0)); break;
     }
 }
 
