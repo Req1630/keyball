@@ -77,7 +77,7 @@ void oledkit_render_info_user(void) {
 }
 
 void oledkit_render_logo_user(void) {
-    keyball_oled_render_sub();
+    keyball_oled_render_mysub();
 }
 
 bool oled_task_user(void) {
