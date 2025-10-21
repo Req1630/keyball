@@ -75,4 +75,17 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_ballinfo();
     keyball_oled_render_layerinfo();
 }
+
+void oledkit_render_logo_user(void) {
+
+}
+
+bool oled_task_user(void) {
+    if (is_keyboard_master()) {
+        oledkit_render_info_user();
+    } else {
+        oledkit_render_logo_user();
+    }
+    return true;
+}
 #endif
