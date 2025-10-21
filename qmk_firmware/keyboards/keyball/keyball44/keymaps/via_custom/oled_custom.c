@@ -76,14 +76,12 @@ static const char *itoc(uint8_t number, uint8_t width) {
     return str;
 }
 
-static uint8_t g_layerstate = 2;
-
 static void keyball_oled_render_sub(void) {
     oled_set_cursor(0, 0);
-    oled_write(itoc(g_layerstate, 0), false);
+    oled_write(itoc(get_highest_layer(layer_state), 0), false);
 
     oled_set_cursor(0, 10);
-    switch (g_layerstate) {
+    switch (get_highest_layer(layer_state)) {
         case 1:  oled_write_raw_P(img_num1, sizeof(img_num1)); break;
         case 2:  oled_write_raw_P(img_num2, sizeof(img_num2)); break;
         case 3:  oled_write_raw_P(img_num3, sizeof(img_num3)); break;
@@ -95,10 +93,5 @@ static void keyball_oled_render_sub(void) {
 // OLEDメイン処理(サブ側)
 void keyball_oled_render_mysub(void) {
     keyball_oled_render_sub();
-}
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    g_layerstate = get_highest_layer(layer_state);
-    return state;
 }
 
