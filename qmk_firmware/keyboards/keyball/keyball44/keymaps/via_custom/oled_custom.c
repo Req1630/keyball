@@ -78,7 +78,7 @@ static const char *itoc(uint8_t number, uint8_t width) {
 
 static void keyball_oled_render_sub(void) {
     oled_set_cursor(0, 0);
-    oled_write(itoc(get_highest_layer(layer_state) 0), false);
+    oled_write(itoc(get_highest_layer(layer_state), 0), false);
 
     oled_set_cursor(0, 10);
     switch (get_highest_layer(layer_state)) {
