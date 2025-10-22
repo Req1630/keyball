@@ -80,7 +80,7 @@ static void keyball_oled_render_sub(void) {
     oled_set_cursor(0, 0);
     oled_write_raw_P(epd_bitmap_gnav_top_pc, sizeof(epd_bitmap_gnav_top_pc));
 
-    oled_set_cursor(0, 5);
+    oled_set_cursor(0, 4);
     switch (get_highest_layer(layer_state)) {
         case 1:  oled_write_raw_P(img_num1, sizeof(img_num1)); break;
         case 2:  oled_write_raw_P(img_num2, sizeof(img_num2)); break;
@@ -89,7 +89,7 @@ static void keyball_oled_render_sub(void) {
         case 5:  oled_write_raw_P(img_num5, sizeof(img_num5)); break;
         case 6:  oled_write_raw_P(img_num6, sizeof(img_num6)); break;
         case 7:  oled_write_raw_P(img_num7, sizeof(img_num7)); break;
-        default: oled_write_raw_P(img_num0, sizeof(img_num0)); break;
+        default: break;
     }
 }
 
