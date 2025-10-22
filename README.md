@@ -34,3 +34,8 @@ default layler
 
 ### ▼ Layler 7.
 
+
+## ■ Memo.
+
+* [Remap](https://remap-keys.app/)
+* [Pro Micro Web Updater](https://sekigon-gonnoc.github.io/promicro-web-updater/index.html)
