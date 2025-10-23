@@ -235,7 +235,7 @@ __attribute__((weak)) void keyball_on_apply_motion_to_mouse_scroll(keyball_motio
 #endif
 }
 
-static void adjust_mouse_speed(Keyball_motion_t *m) {
+static void adjust_mouse_speed(keyball_motion_t *m) {
     int16_t movement_size = abs(m->x) + abs(m->y);
 
     float speed_multiplier = 1.0;
