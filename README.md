@@ -8,6 +8,8 @@
 
 ### ▼ Layer 0.
 
+![layer0](./img/keymap_layer_0.png)
+
 default layler
 
 * QWERTY配列
@@ -22,25 +24,38 @@ default layler
 
 ### ▼ Layer 1.
 
+
+![layer1](./img/keymap_layer_1.png)
+
 FunctionKey, ArrowKey
 
 ### ▼ Layer 2.
+
+![layer2](./img/keymap_layer_2.png)
 
 Shift + Modifier Key
 
 ### ▼ Layer 3.
 
+![layer3](./img/keymap_layer_3.png)
+
 Num Key
 
 ### ▼ Layer 4.
+
+![layer4](./img/keymap_layer_4.png)
 
 Ctrl ShortcutKey, ArrowKey
 
 ### ▼ Layer 5.
 
+![layer5](./img/keymap_layer_5.png)
+
 VisualAssist ShortcutKey
 
 ### ▼ Layer 6.
+
+![layer6](./img/keymap_layer_6.png)
 
 Mouse Movement 
 
@@ -51,6 +66,8 @@ Mouse Movement
 * `MO(6)` : Layer 6 固定
 
 ### ▼ Layler 7.
+
+![layer7](./img/keymap_layer_7.png)
 
 Keyball Setting mode
 
